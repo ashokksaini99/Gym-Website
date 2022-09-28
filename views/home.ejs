@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Royal Fitness Gym</title>
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+
+<body>
+    <%-include('base') %>
+    <% if(error!='' ){ %>
+        <div class="message" id="error">
+            <div class="msg"><strong>Error :</strong><%=error%></div>
+            <div class="close-btn" onclick="remove()"><span class="fas fa-times"></span></div>
+        </div>
+    <% } %>
+    <div class="promo">
+        <img class="promo-img" src="../assets/static/bg2.png" alt="">
+    </div>
+    <div class="register">
+        <h1 class="register-heading">Grab Your FREE TRIAL The Best Gym Near You!</h1>
+        <button class="register-btn"><a href="/signup">Sign-up</a></button>
+    </div>
+    <div class="bottom">
+        <div class="bottom-one">
+            <h1 class="bottom-one-heading">Shape up with Best Fitness Center in Jaipur</h1>
+            <ul class="bottom-ul">
+                <li>Aerobics and Cardio sessions</li>
+                <li>High Intensity Interval Training</li>
+                <li>Zumba & Yoga Classes</li>
+                <li>Weight Gain and Weight Loss Training</li>
+                <li>Abs and Core development</li>
+            </ul>
+        </div>
+        <div class="form-div">
+            <form class="gym-form" method="post">
+                <div class="form">
+                    <h2 class="form-heading">Fill in your details for the FREE PASS</h2>
+                    <input type="text" placeholder="Enter your name" name="userName" required>
+                    <input type="tel" placeholder="Enter you mobile number" name="mob"
+                        pattern="[0-9]{10}" required>
+                    <input type="email" placeholder="Enter your Email-id" name="email" required>
+                    <input type="text" placeholder="Enter your address" name="address" required><br>
+                    <button class="form-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <%-include('base2') %>
+    <script src="https://kit.fontawesome.com/115d8e1021.js" crossorigin="anonymous"></script>
+    <script>
+        function remove() {
+            var error =document.getElementById("error");
+            error.parentNode.removeChild(error);
+        };
+    </script>
+</body>
+
+</html>

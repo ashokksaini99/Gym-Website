@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../assets/css/profile.css">
+    <script src="../assets/preventBack.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <img class="gymlogo" src="../assets/static/logo.jpg" alt="gym logo">
+        <div class="name">Royal Fitness Gym</div>
+        <ul id="nav">
+            <li class="home" id="active">
+                <a id="nav-mid" href="#">Dashboard</a>
+            </li>
+            <% if(active!='' ){ %>
+            <li class="contact">
+                <a id="nav-mid" href="#activePlan">Active Plan</a>
+            </li>
+            <% } %>
+            <% if(buy!='' ){ %>
+            <li class="contact">
+                <a id="nav-mid" href="#buyPlan">Buy Plan</a>
+            </li>
+            <% } %>
+            <li class="contact">
+                <a id="nav-mid" href="#contactUs">Contact Us</a>
+            </li>
+        </ul>
+        <button class="nav-btn"><a href="/logout">Log-out</a></button>
+    </div>
+    <div class="slider-box">
+        <div id="slider">
+            <img class="silderImg" id="sliderImg" src="../assets/static/slide1.jpg" alt="">
+            <img class="silderImg" src="../assets/static/slide2.jpg" alt="">
+            <img class="silderImg" src="../assets/static/slide3.jpg" alt="">
+            <img class="silderImg" src="../assets/static/slide4.jpg" alt="">
+        </div>
+        <div class="indicators">
+            <span id="btn1" class="active"></span>
+            <span id="btn2"></span>
+            <span id="btn3"></span>
+            <span id="btn4"></span>
+        </div>
+    </div>
+    <% if(active!='' ){ %>
+    <div class="activePlan" id="activePlan">
+        <h1>Your Active Plans</h1>
+        <div class="activeDiv">
+            <div><strong>Amount :</strong><%=a%></div>
+            <div><strong>Payment Id :</strong><%=b%></div>
+            <div><strong>Purchase Date :</strong><%=c%></div>
+            <div><strong>Expiry :</strong><%=d%></div>
+        </div>
+    </div>
+    <% } %>
+
+    <% if(buy!='' ){ %>
+    <div class="priceMainDiv" id="buyPlan">
+        <h1>FITNESS PRICING TABLE</h1>
+        <div class="priceSection">
+            <div class="price">
+                <div class="price1">
+                    <h2>STANDARD</h2>
+                    <h3>1500/month</h3>
+                </div>
+                <div>
+                    <ul class="price-ul">
+                        <li>
+                            <span>
+                                <p class="big"><i class="fa-solid fa-check"></i> Training Overview </p>
+                                <p class="big"><i class="fa-solid fa-xmark"></i> Beginner Classes </p>
+                                <p class="big"><i class="fa-solid fa-xmark"></i> Personal Training </p>
+                                <p class="big"><i class="fa-solid fa-xmark"></i> Olympic Weightlifting </p>
+                                <p class="big"><i class="fa-solid fa-xmark"></i> Foundation Training </p>
+                            </span>
+                        </li>
+                    </ul>
+                    <button class="rzp-btn btn1" id="rzp-button1">Pay Now</button>
+                </div>
+            </div>
+            <div class="price">
+                <div class="price2">
+                    <h2>POPULAR</h2>
+                    <h3>2000/month</h3>
+                </div>
+                <div>
+                    <ul class="price-ul">
+                        <li>
+                            <span>
+                                <p class="big"><i class="fa-solid fa-check"></i> Training Overview </p>
+                                <p class="big"><i class="fa-solid fa-check"></i> Beginner Classes </p>
+                                <p class="big"><i class="fa-solid fa-xmark"></i> Personal Training </p>
+                                <p class="big"><i class="fa-solid fa-xmark"></i> Olympic Weightlifting </p>
+                                <p class="big"><i class="fa-solid fa-xmark"></i> Foundation Training </p>
+                            </span>
+                        </li>
+                    </ul>
+                    <button class="rzp-btn btn2" id="rzp-button1">Pay Now</button>
+                </div>
+            </div>
+            <div class="price">
+                <div class="price3">
+                    <h2>GOLDEN</h2>
+                    <h3>3500/month</h3>
+                </div>
+                <div>
+                    <ul class="price-ul">
+                        <li>
+                            <span>
+                                <p class="big"><i class="fa-solid fa-check"></i> Training Overview </p>
+                                <p class="big"><i class="fa-solid fa-check"></i> Beginner Classes </p>
+                                <p class="big"><i class="fa-solid fa-check"></i> Personal Training </p>
+                                <p class="big"><i class="fa-solid fa-xmark"></i> Olympic Weightlifting </p>
+                                <p class="big"><i class="fa-solid fa-xmark"></i> Foundation Training </p>
+                            </span>
+                        </li>
+                    </ul>
+                    <button class="rzp-btn btn3" id="rzp-button1">Pay Now</button>
+                </div>
+            </div>
+            <div class="price">
+                <div class="price4">
+                    <h2>PROFESSIONAL</h2>
+                    <h3>5000/month</h3>
+                </div>
+                <div>
+                    <ul class="price-ul">
+                        <li>
+                            <span>
+                                <p class="big"><i class="fa-solid fa-check"></i> Training Overview </p>
+                                <p class="big"><i class="fa-solid fa-check"></i> Beginner Classes </p>
+                                <p class="big"><i class="fa-solid fa-check"></i> Personal Training </p>
+                                <p class="big"><i class="fa-solid fa-check"></i> Olympic Weightlifting </p>
+                                <p class="big"><i class="fa-solid fa-check"></i> Foundation Training </p>
+                            </span>
+                        </li>
+                    </ul>
+                    <button class="rzp-btn btn4" id="rzp-button1">Pay Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+    <div class="contactUs" id="contactUs">
+        <div>
+            <h1 id="contact">Get In Touch</h1>
+            <p class="contact-para">Our Team Is Always Ready To Hear From You. We Make It A Point To Respond Within 24
+                Hours
+                On Weekdays And 48 Hours On Weekends.<br>Email: royalfitnessgym@gmail.com<br>Mobile: 9876543210
+            </p>
+        </div>
+        <div class="google">
+            <p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1934.5337204546338!2d75.74507137507896!3d26.87849781687806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5972c08be69%3A0xfff5701e7ba9c92!2sSapphire%20World%20Hotel!5e0!3m2!1sen!2sin!4v1662983779363!5m2!1sen!2sin"width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </p>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/115d8e1021.js" crossorigin="anonymous"></script>
+    <script src="../assets/razorpay_btn1.js"></script>
+    <script src="../assets/slider.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>signup</title>
+    <link rel="stylesheet" href="../assets/css/signup.css">
+</head>
+
+<body>
+    <%-include('base') %>
+        <div class="container">
+            <h2 class="container-heading"> Sign-up to Royal Fitness Gym</h2>
+            <form action="/signup" method="post">
+                <div class="box">
+                    <input type="text" name="name" class="box-input" placeholder="Enter your name">
+                    <input type="email" name="email" class="box-input" placeholder="Enter your email">
+                    <input type="password" name="password" class="box-input" placeholder="Create passward">
+                </div>
+                <button class="btn-signup">Sign-up</button>
+                <div class="loginRedirect">Already register? <a href="/login">Login</a></div>
+            </form>
+        </div>
+    <%-include('base2') %>
+</body>
+
+</html>

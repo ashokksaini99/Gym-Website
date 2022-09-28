@@ -1,0 +1,134 @@
+@import url(../css/base.css);
+
+.promo {
+    background: url(../static/bg1.png);
+    height: 400px;
+    background-size: initial;
+}
+
+.promo-img {
+    width: 250px;
+    margin-left: 130px;
+    padding-top: 50px;
+    height: 250px;
+}
+
+.register {
+    height: 150px;
+}
+
+.register-heading {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.register-btn {
+    background-color: red;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 50%;
+    margin-top: 20px;
+}
+
+.register-btn:hover {
+    background-color: rgb(50, 42, 165);
+}
+
+.form-btn {
+    margin: 14px;
+    background-color: rgb(28, 29, 138);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    width: 70px;
+    color: white;
+}
+
+.form-btn:hover {
+    background-color: rgb(50, 42, 165);
+}
+
+.form {
+    margin: 14px;
+    border-radius: 10px;
+    margin-left: 200px;
+    padding: 0;
+    background-color: black;
+}
+
+.form-div {
+    margin-top: 30px;
+    text-align: center;
+    width: 700px;
+}
+
+.form input {
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    width: 60%;
+    height: 25px;
+    margin: 10px;
+    padding: 1px 5px;
+}
+
+.form-heading {
+    padding: 20px;
+    color: white;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    background: url(../static/background.jpg);
+    background-size: cover;
+    height: 500px;
+    text-align: center;
+}
+
+.bottom-one-heading {
+    padding-bottom: 20px;
+}
+
+.bottom-one {
+    margin-left: 30px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.bottom-ul {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    margin: 0px 50px;
+}
+
+.bottom-ul li {
+    background-color: white;
+    text-align: center;
+    margin: 5px auto;
+    padding: 5px;
+    width: 350px;
+    border-radius: 7px;
+}
+
+.message {
+    display: flex;
+    justify-content: space-between;
+    background-color: orange;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    margin: 2px 0px;
+    padding: 0px 3px;
+}
+
+.close-btn {
+    cursor: pointer;
+}

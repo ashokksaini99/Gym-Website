@@ -1,0 +1,38 @@
+@import url(../css/base.css);
+
+.container {
+    color: brown;
+    background-color: antiquewhite;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#about {
+    text-align: center;
+    padding: 30px;
+}
+
+.about-para {
+    padding: 30px;
+    padding-top: 0;
+    text-align: center;
+    margin: auto;
+    font-size: large;
+}
+
+body {
+    background-image: url(../static/sign.jpg);
+    background-size: cover;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}

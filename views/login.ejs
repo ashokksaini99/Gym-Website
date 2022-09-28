@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <script src="../assets/preventBack.js"></script>
+</head>
+
+<body>
+    <%-include('base') %>
+    <% if(error!='' ){ %>
+        <div class="message" id="error">
+            <div class="msg"><strong>Error :</strong><%=error%></div>
+            <div class="close-btn" onclick="remove()"><span class="fas fa-times"></span></div>
+        </div>
+    <% } %>
+        <div class="container">
+            <h2 class="container-heading">Login to Royal Fitness Gym</h2>
+            <form action="/login" method="post">
+                <div class="box">
+                    <input type="text" class="box-input" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="box">
+                    <input type="password" class="box-input" name="password" id="passwoed"
+                        placeholder="Enter your passward">
+                </div>
+                <button class="login-btn">Login</button>
+                <div class="signupRedirect">New to Royal Fitness Gym? <a href="/signup">Sign-up</a></div>
+            </form>
+        </div>
+    <%-include('base2') %>
+    <script src="https://kit.fontawesome.com/115d8e1021.js" crossorigin="anonymous"></script>
+    <script>
+        function remove() {
+            var error =document.getElementById("error");
+            error.parentNode.removeChild(error);
+        };
+    </script>
+</body>
+
+</html>

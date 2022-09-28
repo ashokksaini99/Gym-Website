@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    background-color: black;
+    padding: 8px;
+    display: flex;
+    color: white;
+}
+
+.gymlogo {
+    margin-left: 20px;
+    height: 30px;
+    width: 30px;
+    margin-top: 0;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-style: oblique;
+    margin-left: 10px;
+}
+
+#nav {
+    margin-right: 52%;
+    margin-top: 5px;
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin-left: 30px;
+}
+
+#nav-mid {
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+#active {
+    text-decoration: underline;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-btn {
+    background-color: red;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+
+.nav-btn:hover {
+    background-color: rgb(50, 42, 165);
+}
+
+body {
+    background-image: url(../static/sign.jpg);
+    background-size: cover;
+}
+
+.priceMainDiv {
+    width: 80%;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.priceSection {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.price-ul {
+    text-align: left;
+    font-weight: 100;
+}
+
+.big {
+    line-height: 1.8;
+}
+
+.price {
+    background-color: white;
+}
+
+.rzp-btn {
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.btn1 {
+    background-color: rgba(155, 71, 71, 0.418);
+}
+
+.btn2 {
+    background-color: rgb(97, 97, 190);
+}
+
+.btn3 {
+    background-color: green;
+}
+
+.btn4 {
+    background-color: orange;
+}
+
+.rzp-btn:hover {
+    background-color: rgb(50, 42, 165);
+}
+
+.price1 {
+    width: 200px;
+    color: white;
+    padding: 20px;
+    background-color: rgba(155, 71, 71, 0.418);
+}
+
+.price2 {
+    width: 200px;
+    padding: 20px;
+    color: white;
+    background-color: rgb(97, 97, 190);
+}
+
+.price3 {
+    width: 200px;
+    padding: 20px;
+    color: white;
+    background-color: green;
+}
+
+.price4 {
+    width: 200px;
+    color: white;
+    padding: 20px;
+    background-color: orange;
+}
+
+.slider-box {
+    width: 90%;
+    max-height: 80vh;
+    position: relative;
+    overflow: hidden;
+    margin: 30px auto;
+}
+
+#slider {
+    width: 100%;
+    display: inline-flex;
+    transition: 0.7s;
+}
+
+#slider sliderImg {
+    width: 100%;
+}
+
+.indicators {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+
+.indicators span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.active {
+    background: #ffff !important;
+}
+
+.contactUs {
+    color: brown;
+    background-color: white;
+    width: 80%;
+    height: auto;
+    margin: 50px auto;
+    border-radius: 10px;
+    display: flex;
+}
+
+#contact {
+    padding: 30px;
+    text-align: center;
+    color: brown;
+}
+
+.contact-para {
+    padding: 30px;
+    padding-top: 0;
+    text-align: center;
+    margin: auto;
+    font-size: large;
+}
+
+#activePlan {
+    margin: 100px auto;
+}
+
+.activeDiv {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+}
